@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+:root {
+  --font-primary: "Lexend Deca", sans-serif;
+  --font-secondary: "Big Shoulders Display", cursive;
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-orange: hsl(31, 77%, 52%);
+  --color-darkCyan: hsl(179, 100%, 13%);
+  --color-lightGray: hsl(0, 0%, 95%);
+  --color-background: hsla(0, 0%, 100%, 0.75);
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 5rem 2rem;
+  color: var(--color-lightGray);
+}
+
+.card {
+  width: min(100%, 75rem);
+}
+
+.container {
+  display: flex;
+}
+
+.card__one {
+  background-color: var(--color-orange);
+  padding: 3.5rem;
+  border-radius: 1rem 0 0 1rem;
+}
+.card__two {
+  background-color: var(--color-cyan);
+  padding: 3.5rem;
+}
+.card__three {
+  background-color: var(--color-darkCyan);
+  padding: 3.5rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.card__title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-family: var(--font-secondary);
+}
+
+.card__description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+}
+
+.card__btn {
+  padding: 1rem 3rem;
+  border: solid 1px var(--color-lightGray) ;
+  border-radius: 2rem;
+  color: var(--color-lightGray);
+  margin-top: 7rem;
+  background-color: transparent;
+}
+
+.card__btn:hover{
+    background-color: var(--color-lightGray);
+    color: var(--color-orange);
+    cursor: pointer;
+}
+.btn-1:hover{
+    color: var(--color-orange);
+}
+.btn-2:hover{
+    color: var(--color-cyan);
+}
+.btn-3:hover{
+    color: var(--color-darkCyan);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .card {
+    width: min(100%, 40rem);
+  }
+
+  .card__one {
+    border-radius: 1rem  1rem 0 0;
+  }
+  .card__three {
+    border-radius:  0 0 1rem 1rem;
+  }
+}
