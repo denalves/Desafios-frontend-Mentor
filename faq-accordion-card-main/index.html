@@ -18,11 +18,20 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <section class="faq">
       <div class="container">
         <div class="card">
           <div class="ilustration">
-            <img src="images/illustration-woman-online-desktop.svg" alt="" />
+            <img src="images/illustration-box-desktop.svg" class="box" alt="">
+            <div class="tess">
+     
+            <picture>
+              <source class="woman"
+                media="(min-width: 768px)"
+                srcset="images/illustration-woman-online-desktop.svg"
+              />
+              <img class="woman-mobile" src="./images/illustration-woman-online-mobile.svg" alt="" />
+            </picture>
+          </div>
           </div>
           <div class="sidemenu">
             <h1 class="sidemenu__title">FAQ</h1>
@@ -97,9 +106,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
+    </section> 
     <script src="script.js"></script>
   </body>
 </html>

@@ -43,10 +43,31 @@ body {
 
 .card{
     display: flex;
+    position: relative;
+}
+.ilustration{
+    display: flex;
+    align-items: center;
+}
+.box{
+    width: 16rem;
+    position: absolute;
+    left: -7.8rem;
+    top: 40%;
+}
+.tess{
+    overflow: hidden;
 }
 
+.woman{
+    margin-left: -6rem;
+    width: 37rem;
+}
+
+
+
 .sidemenu{
-    padding: 4rem;
+    padding: 6rem;
 }
 
 .sidemenu__title{
@@ -91,4 +112,26 @@ body {
       font-size: 1.1rem;
       line-height: 1.5;
       color: var(--color-very-dark-grayish-blue);
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .card {
+      flex-direction: column;
+    }
+    .box{
+        visibility: hidden;
+    }
+    body{
+        padding: 10rem 2rem;
+    }
+    .tess{
+        margin: 0 auto;
+        margin-top: -11rem;
+    }
+    .woman{
+        margin-left: -3rem;
+       
+    }
+
   }
